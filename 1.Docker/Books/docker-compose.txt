@@ -4,3 +4,15 @@
 => docker-compose -f docker-compose.yml -f docker-compose.override.yml down
 3. build all images again in the docker compose
 => docker-compose -f docker-compose.yml -f docker-compose.override.yml up --build
+4. Build docker compose
+docker compose build
+
+
+note:
+Tập tin docker-compose.override.yml là một phần của Docker Compose, một công cụ giúp quản lý và triển khai ứng dụng dưới dạng các container. Tệp này được sử dụng để ghi đè hoặc mở rộng cấu hình được định nghĩa trong tệp docker-compose.yml khi bạn chạy các container bằng lệnh docker-compose.
+
+Khi bạn sử dụng docker-compose.override.yml, nó cho phép bạn thay đổi hoặc mở rộng cấu hình của ứng dụng mà không cần chỉnh sửa trực tiếp tệp docker-compose.yml. Điều này có thể hữu ích khi bạn muốn tuỳ chỉnh cấu hình cho môi trường cụ thể, chẳng hạn như môi trường phát triển hoặc môi trường sản phẩm cuối.
+
+Tệp docker-compose.override.yml thường được sử dụng trong quy trình phát triển và triển khai ứng dụng khi bạn cần thay đổi các giá trị cụ thể, chẳng hạn như biến môi trường, cổng, đường dẫn thư mục, hoặc các cài đặt khác mà bạn muốn áp dụng cho môi trường cụ thể mà không ảnh hưởng đến cấu hình chính của ứng dụng.
+
+Khi bạn chạy Docker Compose với docker-compose.override.yml, cấu hình trong tệp docker-compose.override.yml sẽ ghi đè lên các cài đặt tương tự trong docker-compose.yml, cho phép bạn tùy chỉnh hoặc mở rộng cấu hình mà không cần thay đổi tệp cấu hình gốc.
